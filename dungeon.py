@@ -3,8 +3,8 @@ import random
 
 
 dimensions = (14, 10)
-floor = "◻️"
-wall = "◼️"
+floor = "◽"
+wall = "◼"
 basic_dungeon =     [[wall]*14,
                     [wall]+[floor]*12 + [wall],
                     [wall]+[floor]*12 + [wall],
