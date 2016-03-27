@@ -27,8 +27,8 @@ def gen_dungeon():
     TEMPLATE_DUNGEON = random.choice(DUNGEONS)
     dungeon = TEMPLATE_DUNGEON
     decorate_room(dungeon)
-    #printable_dungeon = format_dungeon(dungeon)
-    printable_dungeon = dungeon
+    printable_dungeon = format_dungeon(dungeon)
+    #printable_dungeon = dungeon
     return(printable_dungeon)
 
 def decorate_room(dungeon):
