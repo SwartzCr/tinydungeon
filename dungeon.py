@@ -40,11 +40,11 @@ def decorate_room(dungeon):
 def add_doors(dungeon, num_doors):
     door = random.choice(DOORS)
     for i in range(num_doors):
-        placement = random.randint(0,45)
+        placement = random.randint(0,37)
         if placement < 14:
             dungeon[0][placement] = door
-        elif placement > 31:
-            dungeon[9][placement-32] = door
+        elif placement > 23:
+            dungeon[6][placement-24] = door
         else:
             dungeon[int((placement-14)/2)][-(placement%2)] = door #ewww
 
