@@ -32,6 +32,7 @@ candle = u"\U0001f56f"
 crown = u"\U0001f451"
 chest = u"\U0001f381"
 credit_card = u"\U0001f4b3"
+crossed_swords = u"\u2694"
 crystal_ball = u"\U0001f52e"
 dagger = u"\U0001f5e1"
 gem = u"\U0001f48e"
@@ -60,6 +61,7 @@ ITEMS = ([bag_of_holding]*3+
          [crown]*5+
          [chest]*5+
          [credit_card]*3+
+         [crossed_swords]*3+
          [crystal_ball]*2+
          [dagger]*5+
          [gem]*2+
@@ -85,7 +87,9 @@ shrine = u"\u26e9"
 statue = u"\U0001f5ff"
 temple = u"\U0001f3db"
 web = u"\U0001f578"
+fire = u"\U0001f525"
 MONUMENTS = ([bath]*1+
+             [fire]*2+
              [statue]*3+
              [temple]*2+
              [shrine]*2+

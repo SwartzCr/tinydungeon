@@ -73,28 +73,18 @@ def gen_paths(room_list):
             x_overlap = sorted(list(set(range(room1[0][0],room1[1][0]+1)).intersection(set(range(room2[0][0], room2[1][0]+1)))))
             y_overlap = sorted(list(set(range(room1[0][1],room1[1][1]+1)).intersection(set(range(room2[0][1], room2[1][1]+1)))))
             if len(x_overlap):
-                print("We're going down!!")
-                print((room1, room2))
-                print(range(min(room2[0][1], room1[1][1])+1, max(room1[1][1], room2[0][1])))
                 ys = sorted([room1[0][1], room1[1][1], room2[0][1], room2[1][1]])
                 y_difference = sorted(list(set(range(ys[1]+1, ys[2]))))
 
                 #y_difference = sorted(list(set(range(min([room1[1][1], room2[0][1]])+1,
                 #                                     max([room1[1][1], room2[0][1]])))))
-                print(x_overlap)
-                print(y_difference)
                 path = make_v_path(x_overlap, y_difference)
                 paths = paths.union(path)
             elif len(y_overlap):
-                print("Everything is going right")
-                print((room1, room2))
-                print(range(min(room2[1][0], room1[1][0])+1, max(room1[1][0], room2[0][0])))
                 xs = sorted([room1[0][0], room1[1][0], room2[0][0], room2[1][0]])
                 x_difference = sorted(list(set(range(xs[1]+1, xs[2]))))
                 #x_difference = sorted(list(set(range(min([room1[1][0], room2[0][0]])+1,
                 #                                     max([room1[1][0], room2[0][0]])))))
-                print(y_overlap)
-                print(x_difference)
                 path = make_h_path(x_difference, y_overlap)
                 paths = paths.union(path)
                 continue
@@ -107,10 +97,8 @@ def make_v_path(x, y):
         return path
     x1 = random.choice(x)
     y1 = y[0]
-    print((x1,y1))
     path.add((x1, y1))
     y1 += 1
-    print((x1,y1))
     path.add((x1, y1))
     xendpoint = random.choice([x[0], x[-1]])
     if xendpoint > x1:
@@ -120,11 +108,9 @@ def make_v_path(x, y):
     while y1 != y[-1]:
         if x1 != xendpoint and random.choice([0,1]):
             x1 += direction
-            print((x1,y1))
             path.add((x1, y1))
         else:
             y1 += 1
-            print((x1,y1))
             path.add((x1, y1))
     return path
 
@@ -135,10 +121,8 @@ def make_h_path(x, y):
         return path
     x1 = x[0]
     y1 = random.choice(y)
-    print((x1,y1))
     path.add((x1, y1))
     x1 += 1
-    print((x1,y1))
     path.add((x1,y1))
     yendpoint = random.choice([y[0], y[-1]])
     if yendpoint > y1:
@@ -148,11 +132,9 @@ def make_h_path(x, y):
     while x1 != x[-1]:
         if y1 != yendpoint and random.choice([0,1]):
             y1 += direction
-            print((x1,y1))
             path.add((x1, y1))
         else:
             x1 += 1
-            print((x1,y1))
             path.add((x1, y1))
     return path
     return path
@@ -269,4 +251,4 @@ ACTIONS = ([place_monster]*10+
            [place_item]*5+
            [place_food]*3+
            [place_monument]*2+
-           [do_nothing]*8)
+           [do_nothing]*5)
