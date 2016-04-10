@@ -103,7 +103,6 @@ DOORS = [door]
 ant = u"\U0001f41c"
 bee = u"\U0001f41d"
 bug = u"\U0001f41b"
-cop = u"\U0001f46e"
 croc = u"\U0001f40a"
 dragon = u"\U0001f409"
 dust_vortex = u"\U0001f32a"
@@ -122,7 +121,6 @@ w_buffalo = u"\U0001f403"
 MONSTERS = ([ant]*1+
             [bee]*1+
             [bug]*1+
-            [cop]*1+
             [croc]*5+
             [dragon]*5+
             [dust_vortex]*1+
