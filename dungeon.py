@@ -13,7 +13,7 @@ PETS = _dungeon_helper.PETS
 floor = _dungeon_helper.floor
 wall = _dungeon_helper.wall
 
-room_tries = 15 
+room_tries = 40
 action_tries = 10
 width, height = (13,10)
 
