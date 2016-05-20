@@ -168,10 +168,10 @@ DUNGEONS = [basic_dungeon]
 
 MONSTER_CLUSTERS = {bee: 10,
                     rat: 4,
-                    ox:  4,
-                    w_buffalo: 3,
-                    snake: 5,
-                    bug: 4,
+                    ox:  2,
+                    w_buffalo: 4,
+                    snake: 6,
+                    bug: 5,
                     ogre: 6}
 
 path = u"\U0001f3fe"

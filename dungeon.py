@@ -14,7 +14,7 @@ floor = _dungeon_helper.floor
 wall = _dungeon_helper.wall
 
 room_tries = 40
-action_tries = 10
+action_tries = 16
 width, height = (13,10)
 
 def gen_dungeon_border(rooms):
