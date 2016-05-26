@@ -77,19 +77,26 @@ def gen_paths(room_list):
 
                 #y_difference = sorted(list(set(range(min([room1[1][1], room2[0][1]])+1,
                 #                                     max([room1[1][1], room2[0][1]])))))
-                path = make_v_path(x_overlap, y_difference)
+                path = make_v_path(x_overlap, y_difference, room_list)
                 paths = paths.union(path)
             elif len(y_overlap):
                 xs = sorted([room1[0][0], room1[1][0], room2[0][0], room2[1][0]])
                 x_difference = sorted(list(set(range(xs[1]+1, xs[2]))))
                 #x_difference = sorted(list(set(range(min([room1[1][0], room2[0][0]])+1,
                 #                                     max([room1[1][0], room2[0][0]])))))
-                path = make_h_path(x_difference, y_overlap)
+                path = make_h_path(x_difference, y_overlap, room_list)
                 paths = paths.union(path)
                 continue
     return paths
 
-def make_v_path(x, y):
+def expand_room_list(room_list):
+    out = set()
+    for room in room_list:
+        out = out.union(set(room))
+    return out
+
+def make_v_path(x, y, room_list):
+    room_spaces = expand_room_list(room_list)
     path = set()
     if len(y) == 1:
         path.add((random.choice(x), y[0]))
@@ -104,7 +111,7 @@ def make_v_path(x, y):
         direction = 1
     else:
         direction = -1
-    while y1 != y[-1]:
+    while y1 != y[-1] and (x1, y1+1) not in room_spaces:
         if x1 != xendpoint and random.choice([0,1]):
             x1 += direction
             path.add((x1, y1))
@@ -114,6 +121,7 @@ def make_v_path(x, y):
     return path
 
 def make_h_path(x, y):
+    room_spaces = expand_room_list(room_list)
     path = set()
     if len(x) == 1:
         path.add((x[0], random.choice(y)))
@@ -128,7 +136,7 @@ def make_h_path(x, y):
         direction = 1
     else:
         direction = -1
-    while x1 != x[-1]:
+    while x1 != x[-1] and (x1+1, y1) not in room_spaces:
         if y1 != yendpoint and random.choice([0,1]):
             y1 += direction
             path.add((x1, y1))
