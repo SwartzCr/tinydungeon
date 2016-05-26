@@ -120,7 +120,7 @@ def make_v_path(x, y, room_list):
             path.add((x1, y1))
     return path
 
-def make_h_path(x, y):
+def make_h_path(x, y, room_list):
     room_spaces = expand_room_list(room_list)
     path = set()
     if len(x) == 1:
