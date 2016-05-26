@@ -105,7 +105,8 @@ def make_v_path(x, y, room_list):
     y1 = y[0]
     path.add((x1, y1))
     y1 += 1
-    path.add((x1, y1))
+    if (x1, y1) not in room_spaces:
+        path.add((x1, y1))
     xendpoint = random.choice([x[0], x[-1]])
     if xendpoint > x1:
         direction = 1
@@ -130,7 +131,8 @@ def make_h_path(x, y, room_list):
     y1 = random.choice(y)
     path.add((x1, y1))
     x1 += 1
-    path.add((x1,y1))
+    if (x1, y1) not in room_spaces:
+        path.add((x1,y1))
     yendpoint = random.choice([y[0], y[-1]])
     if yendpoint > y1:
         direction = 1
