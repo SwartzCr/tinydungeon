@@ -6,22 +6,29 @@ wall = u"\u2b1b"
 floor = u"\u2b1c"
 
 #food
+avocado = u"\U0001f951"
 beer = u"\U0001f37a"
 cheese = u"\U0001f9c0"
 chocolate = u"\U0001f36b"
+egg = u"\U0001f95a"
 fruit = u"\U0001f351"
 meat = u"\U0001f356"
 mushroom = u"\U0001f344"
+pancakes = u"\U0001f95e"
 pizza = u"\U0001f355"
-FOODS = ([beer]*3+
+FOODS = ([avocado]*1+
+         [beer]*3+
          [cheese]*5+
          [chocolate]*2+
+         [egg]*5+
          [fruit]*5+
          [meat]*10+
          [mushroom]*2+
-         [pizza]*3)
+         [pizza]*3+
+         [pancakes]*3)
 
 #items
+amulet = u"\U0001f947"
 bag_of_holding = u"\U0001f45d"
 book = u"\U0001f4d5"
 boots = u"\U0001f462"
@@ -51,7 +58,8 @@ scroll = u"\U0001f4dc"
 shield = u"\U0001f6e1"
 shirt = u"\U0001f455"
 shirt2 = u"\U0001f3bd"
-ITEMS = ([bag_of_holding]*3+
+ITEMS = ([amulet]*2+
+         [bag_of_holding]*3+
          [book]*10+
          [boots]*10+
          [bow_arrow]*10+
@@ -101,6 +109,7 @@ DOORS = [door]
 
 #monsters
 ant = u"\U0001f41c"
+bat = u"\U0001f987"
 bee = u"\U0001f41d"
 bug = u"\U0001f41b"
 croc = u"\U0001f40a"
@@ -108,17 +117,23 @@ dragon = u"\U0001f409"
 dust_vortex = u"\U0001f32a"
 elephant = u"\U0001f418"
 ghost = u"\U0001f47b"
+horse = u"\U0001f40e"
 imp = u"\U0001f47f"
+lizard = u"\U0001f98e"
 monkey = u"\U0001f412"
 ogre = u"\U0001f479"
+owl = u"\U0001f989"
 ox = u"\U0001f402"
 rat = u"\U0001f400"
 scorpion = u"\U0001f982"
 snake = u"\U0001f40d"
 sheep = u"\U0001f40f"
+spider = u"\U0001f577"
+turtle = u"\U0001f422"
 unicorn = u"\U0001f984"
 w_buffalo = u"\U0001f403"
 MONSTERS = ([ant]*1+
+            [bat]*3+
             [bee]*1+
             [bug]*1+
             [croc]*5+
@@ -126,14 +141,19 @@ MONSTERS = ([ant]*1+
             [dust_vortex]*1+
             [elephant]*5+
             [ghost]*5+
+            [horse]*1+
             [imp]*3+
+            [lizard]*5+
             [monkey]*2+
             [ogre]*5+
+            [owl]*1+
             [ox]*10+
             [rat]*1+
             [scorpion]*5+
             [snake]*10+
             [sheep]*5+
+            [spider]*5+
+            [turtle]*2+
             [unicorn]*5+
             [w_buffalo]*5)
 #people
